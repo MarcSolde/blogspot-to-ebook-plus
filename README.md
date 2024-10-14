@@ -1,3 +1,5 @@
+# README from the original project, needs to be updated
+
 # Blog to EPUB eBook
 
 Are you the kind of person who sees an interesting new blog and want to read from start to finish?
