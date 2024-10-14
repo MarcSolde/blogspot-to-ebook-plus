@@ -85,10 +85,15 @@ async function* getPostsFromList(url) {
   }
 }
 
+async function* getSinglePost(url) {
+  yield await getOneBloggerPost(url);
+}
+
 export const getFromBlogger = (url) => {
   const parsedUrl = new URL(url);
-  if (parsedUrl.pathname.endsWith(".html")) {
-    return getOlderPostsFrom(url);
-  }
-  return getPostsFromList(url);
+  //if (parsedUrl.pathname.endsWith(".html")) {
+  //  return getOlderPostsFrom(url);
+  //}
+  return getSinglePost(url);
+  //return getPostsFromList(url);
 };
